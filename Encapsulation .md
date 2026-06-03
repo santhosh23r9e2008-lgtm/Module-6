@@ -21,9 +21,29 @@ To implement **Encapsulation** in Python by defining a class `Rectangle` with **
    - Create an object of the `Rectangle` class to trigger the constructor.
 
 ---
-
 ## 💻 Program
-
+```
+class Rectangle:
+def __init__(self):
+      self.__length = int(input("Enter a length of the rectangle : "))
+      self.__breadth = int(input("Enter a breadth of the rectangle : "))
+      self.area = self.__length * self.__breadth
+      print(f"Length : {self.__length} sq.units")
+      print(f"Breadth : {self.__breadth} sq.units")
+      print(f"Area of the Rectangle : {self.area} sq.units")
+call = Rectangle()
+print("\nCalling the private members outside the class.....")
+try :
+ print("Length of the rectangle : ",call.__length,"sq.units")
+except :
+ print("AttributeError: 'Rectangle' object has no attribute '__length'")
+try :
+ print("Breadth of the rectangle : ",call.__breadth,"sq.units")
+except :
+ print("AttributeError: 'Rectangle' object has no attribute '__breadth'")
+```
 ## Output
+<img width="1917" height="912" alt="image" src="https://github.com/user-attachments/assets/b9cbd070-6c22-4d84-a6db-311457fd7925" />
 
 ## Result
+Thus, The Python program to implement Encapsulation in Python by defining a class Rectangle with private member variables __length and __breadth. was executed successfully.
